@@ -1,0 +1,14 @@
+<h1>Gardens Show Page</h1>
+<% #binding.pry %>
+<%= @garden.name %>
+<% @garden.plots.each do |plot| %>
+  <% plot.plants.each do |plant| %>
+    <%= plot.number %>
+    <%= plant.name %>
+  <% end  %>
+<% end %>
+
+<% @garden.unique_plants.each do |plant| %>
+  <%= plant.name %>
+<% end %>
+

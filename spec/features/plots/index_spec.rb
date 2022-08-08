@@ -38,7 +38,7 @@ RSpec.describe "Plots Index Page" do
     within "div#plant-#{plot1.plants[0].id}" do
       expect(page).to have_link("Remove")
       click_link "Remove"
-      expect(current_path).to eq("/plots/#{plot.id}/plants/#{plant.id}")
+      expect(current_path).to eq("/plots")
     end
   end 
 end 
