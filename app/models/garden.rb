@@ -4,6 +4,6 @@ class Garden < ApplicationRecord
   has_many :plants, through: :plant_plots
 
   def unique_plants
-    plants.where('harvest < 100').uniq
+    plants.where('harvest < 100').distinct.pluck(:name)
   end 
 end

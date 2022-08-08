@@ -10,7 +10,8 @@ RSpec.describe "Garden show Page" do
     plant1 = plot1.plants.create!(name: "Sage", description: "dry soil", harvest: 90)
     plant2 = plot1.plants.create!(name: "Lily", description: "wet soil", harvest: 200)
     plant3 = plot1.plants.create!(name: "Lavendar", description: "wet soil", harvest: 70)
-    plant4 = plot2.plants.create!(name: "Basil", description: "dry soil", harvest: 60)
+    plant4 = plot1.plants.create!(name: "Basil", description: "dry soil", harvest: 60)
+ 
 
     visit "/gardens/#{garden1.id}"
 
